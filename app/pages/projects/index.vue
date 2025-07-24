@@ -1,7 +1,11 @@
 <template>
   <div>
     <h1>All Projects</h1>
+<<<<<<< HEAD
     <!-- Tag Filter (to be implemented as a component) -->
+=======
+    <!-- Tag Filter -->
+>>>>>>> a2f9504000a8f87f357a0ea97e4ba9b5e74426fc
     <div class="tag-filter">
       <button v-for="tag in tags" :key="tag" :class="{ active: tag === selectedTag }" @click="selectedTag = tag">
         {{ tag }}
@@ -13,9 +17,15 @@
 </template>
 
 <script setup lang="ts">
+<<<<<<< HEAD
 import ProjectGrid from '@/components/ProjectGrid.vue'
 import { ref, computed } from 'vue'
 import allProjects from '@/data/projects'
+=======
+import ProjectGrid from '../../../../app/components/ProjectGrid.vue'
+import { ref, computed } from 'vue'
+import allProjects from '../../../../app/data/projects'
+>>>>>>> a2f9504000a8f87f357a0ea97e4ba9b5e74426fc
 const tags = ['All', ...Array.from(new Set(allProjects.flatMap(p => p.tags || [])))]
 const selectedTag = ref('All')
 const filteredProjects = computed(() => {
@@ -49,4 +59,8 @@ h1 {
   background: #0070f3;
   color: #fff;
 }
+<<<<<<< HEAD
 </style> 
+=======
+</style>
+>>>>>>> a2f9504000a8f87f357a0ea97e4ba9b5e74426fc

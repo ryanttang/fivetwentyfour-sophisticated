@@ -17,9 +17,15 @@
 </template>
 
 <script setup lang="ts">
+<<<<<<< HEAD
 defineProps({
   projects: { type: Array, required: true }
 })
+=======
+import type { Project } from '../data/projects';
+
+defineProps<{ projects: Project[] }>()
+>>>>>>> a2f9504000a8f87f357a0ea97e4ba9b5e74426fc
 </script>
 
 <style scoped>
