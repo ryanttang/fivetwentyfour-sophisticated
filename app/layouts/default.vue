@@ -34,13 +34,84 @@
     </main>
     <footer class="site-footer">
       <div class="footer-content">
-        <span>1234 Template St, City</span>
-        <span>info@email.com</span>
-        <span class="social-icons">
-          <!-- Replace with your icons/links -->
-          <a href="#" aria-label="Twitter">T</a>
-          <a href="#" aria-label="LinkedIn">L</a>
-        </span>
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="logo-text">Sophisticated</span>
+            <div class="logo-accent"></div>
+          </div>
+          <p class="footer-description">
+            Crafting digital experiences that blend innovation with timeless design. 
+            We transform ideas into extraordinary digital realities.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Dribbble" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.27 8.64-4.46 12.81-8.03 17.72"/>
+                <path d="M20.84 14.25c-3.27-8.64-4.46-12.81-8.03-17.72"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">3D & WebGL</a></li>
+            <li><a href="#">Brand Strategy</a></li>
+            <li><a href="#">Consulting</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Process</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <div class="contact-info">
+            <p>1234 Template St, City</p>
+            <p>info@sophisticated.com</p>
+            <p>+1 (555) 123-4567</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2024 Sophisticated Studio. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
       </div>
     </footer>
   </div>
@@ -256,10 +327,7 @@ header.scrolled {
   width: 100%;
   background: linear-gradient(135deg, #1a1a2e 0%, #2a3a5a 100%);
   color: #fff;
-  padding: 1.5rem 2.5rem;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: relative;
   z-index: 99;
   font-size: 0.95rem;
   backdrop-filter: blur(16px);
@@ -268,29 +336,154 @@ header.scrolled {
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 3rem 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
   font-family: 'Inter', sans-serif;
 }
 
-.social-icons a {
-  color: #b2c7ff;
-  margin-left: 1.5rem;
-  font-size: 1.3rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background: rgba(178, 199, 255, 0.1);
+.footer-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-.social-icons a:hover {
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #b2c7ff, #e0e7ff);
+  border-radius: 1px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo .logo-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #fff 0%, #b2c7ff 50%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-logo .logo-accent {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #b2c7ff, #e0e7ff);
+  border-radius: 50%;
+  animation: logoPulse 3s ease-in-out infinite;
+}
+
+.footer-description {
+  color: #b2c7ff;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  color: #b2c7ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.8rem;
+  border-radius: 50%;
+  background: rgba(178, 199, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(178, 199, 255, 0.2);
+}
+
+.social-link:hover {
   color: #e0e7ff;
   background: rgba(178, 199, 255, 0.2);
   transform: translateY(-2px);
+  border-color: rgba(178, 199, 255, 0.4);
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #b2c7ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: #e0e7ff;
+  transform: translateX(4px);
+}
+
+.contact-info p {
+  color: #b2c7ff;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(178, 199, 255, 0.2);
+  padding: 2rem 3rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-bottom-content p {
+  color: #b2c7ff;
+  font-size: 0.9rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-bottom-links a {
+  color: #b2c7ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #e0e7ff;
 }
 
 /* Responsive Design */
@@ -315,9 +508,15 @@ header.scrolled {
   }
   
   .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1.5rem 2rem 1.5rem;
+  }
+  
+  .footer-bottom-content {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
+    gap: 1rem;
+    text-align: center;
   }
 }
 
@@ -340,13 +539,20 @@ header.scrolled {
   }
   
   .site-footer {
-    padding: 1rem 1.5rem;
+    padding: 0;
+  }
+  
+  .footer-content {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+  
+  .footer-bottom {
+    padding: 1.5rem 1rem;
   }
 }
 
 main {
   padding-top: 80px;
-  padding-bottom: 80px;
   min-height: 100vh;
   background: #fafbfc;
 }
